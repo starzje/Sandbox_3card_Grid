@@ -1,0 +1,172 @@
+:root {
+ --Cyan: hsl(179, 62%, 43%);
+ --Bright-Yellow: hsl(71, 73%, 54%);
+ --Light-Gray: hsl(204, 43%, 93%);
+ --Grayish-Blue: hsl(218, 22%, 67%);
+}
+
+* {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ font-family: 'Karla', sans-serif;
+ font-size: 1rem;
+ line-height: 1.7;
+}
+
+body {
+ background-color: var(--Grayish-Blue);
+ margin: 2em;
+}
+
+/* All cards */
+
+.grid {
+ display: grid;
+ place-content: center;
+}
+
+.cards {
+ max-width: min(80vw, 450px);
+ height: 275px;
+ background-color: white;
+ padding: 1.5em;
+ box-shadow: -2px 5px 15px 3px rgba(0, 0, 0, 0.15);
+
+}
+
+h3 {
+ font-size: 1.3rem;
+}
+
+ul {
+ list-style-type: none;
+ margin-top: 1rem;
+}
+
+/* Utility */
+
+.flex {
+ display: flex;
+ align-items: center;
+ gap: 1em;
+}
+
+
+/* First card */
+
+
+.accent__paragraph {
+ color: var(--Bright-Yellow);
+ margin-bottom: 1rem;
+ font-weight: 700;
+ font-size: 1.05rem;
+ line-height: 1.3;
+}
+
+.card1__community p:nth-child(3) {
+ color: var(--Grayish-Blue);
+}
+
+.card1__community h3 {
+ color: var(--Cyan);
+ margin-bottom: 1rem;
+}
+
+/* Second card */
+
+.card2__subscription {
+ background-color: var(--Cyan);
+ color: white;
+}
+
+.subscription__value {
+ font-size: 2.2rem;
+ font-weight: 700;
+}
+
+.subscription__date {
+ color: var(--Light-Gray)
+}
+
+#button {
+ width: 100%;
+ background-color: var(--Bright-Yellow);
+ color: #fff;
+ border: none;
+ cursor: pointer;
+ font-weight: 700;
+ margin-top: 2em;
+ padding-block: 0.85em;
+ border-radius: 7px;
+ box-shadow: -2px 5px 15px 3px rgba(0, 0, 0, 0.10);
+}
+
+.card2__subscription p:nth-child(3) {
+ margin-top: -0.3em;
+}
+
+/* Third Card */
+
+.card3__why {
+ background-color: #4ABEBD;
+ color: #fff;
+}
+
+.card3__why ul li {
+ color: var(--Light-Gray);
+ line-height: 1.4;
+}
+
+@media only screen and (min-width:1000px) {
+
+ /* Desktop centering */
+
+ body {
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+ }
+
+ /* Desktop grid placement */
+
+ .cards {
+  max-width: 100%;
+  padding-left: 2em;
+  padding-right: 2em;
+ }
+
+ .grid {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 200px 1fr;
+ }
+
+ .card1__community {
+  grid-area: 1 / 1 / 2 / 3;
+ }
+
+ .card2__subscription {
+  grid-area: 2 / 1 / 3 / 2;
+ }
+
+ .card3__why {
+  grid-area: 2 / 2 / 3 / 3;
+ }
+
+ /* Desktop font correction */
+
+ .card1__community p:nth-child(3) {
+  max-width: 60ch;
+ }
+
+ .accent__paragraph {
+  margin-bottom: 0.5em;
+ }
+
+ /* Shadow fix on last card */
+ .card3__why {
+  box-shadow: 5px 10px 9px -5px rgba(0, 0, 0, 0.15);
+ }
+}
