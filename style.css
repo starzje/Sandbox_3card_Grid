@@ -24,6 +24,7 @@ body {
 .grid {
  display: grid;
  place-content: center;
+
 }
 
 .cards {
@@ -136,11 +137,13 @@ ul {
   max-width: 100%;
   padding-left: 2em;
   padding-right: 2em;
+  box-shadow: none;
  }
 
  .grid {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 200px 1fr;
+  box-shadow: 0px 0px 18px 6px rgba(0, 0, 0, 0.15)
  }
 
  .card1__community {
@@ -163,10 +166,5 @@ ul {
 
  .accent__paragraph {
   margin-bottom: 0.5em;
- }
-
- /* Shadow fix on last card */
- .card3__why {
-  box-shadow: 5px 10px 9px -5px rgba(0, 0, 0, 0.15);
  }
 }
